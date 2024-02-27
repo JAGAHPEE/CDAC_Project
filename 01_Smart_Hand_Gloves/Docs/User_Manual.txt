@@ -1,0 +1,29 @@
+To Connect to Hive MQ Securely
+1.  Set up cluster in HIVEMQ Cloud
+2.  Go to Access Management and create credential for clients (can be multiple).
+3.  Change the Credential in the code
+
+const char* ssid = "TP-Link_AOSR";
+const char* password = "7979853506";
+
+const char* mqttServer = "f1c4d286c90e439b89d27d4fda3188f6.s1.eu.hivemq.cloud"; // Cluster URL
+const char* mqttUsername = "sandesh_kale_66";   // Client Credential Username
+const char* mqttPassword = "Sandesh@123";       // Client Credential Password
+int mqttPort = 8883;    // Cluster Access Port
+
+
+To Connect MQTT Explore as a client
+Protocol: mqtt://
+Host: f1c4d286c90e439b89d27d4fda3188f6.s1.eu.hivemq.cloud // Cluster URL
+Port: 8883
+Username: sandesh_kale_66
+Password: Sandesh@123
+Go to Advance -> Certificates -> Upload Server Certificate.
+
+Can also user https://www.hivemq.com/demos/websocket-client/ as client with same credentials mentioned above.
+
+
+
+To Connect Client for Android Application MQTT Dashboard
+Use same paramater and check the box SSL Protocol and URL should be cluster URL
+
